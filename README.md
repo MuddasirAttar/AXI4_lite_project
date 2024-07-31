@@ -1,109 +1,45 @@
-Sure! Here is the `README.md` file for your project:
 
-```markdown
-# AXI4-Lite Protocol RTL Design and Verification
+# AXI4-Lite Master-Slave Project
 
-This project demonstrates the design and verification of AXI4-Lite master and slave modules using SystemVerilog. The project includes a comprehensive testbench to verify the design with multiple read and write transactions, using Verilator for simulation and GTKWave for waveform analysis. Makefile and Linux shell scripts are used for automated build and simulation processes.
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tools Used](#tools-used)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Results](#results)
-- [License](#license)
+This repository contains Verilog code for an AXI4-Lite Master-Slave system, along with a testbench and a Makefile for simulation using Verilator.
 
 ## Overview
 
-The AXI4-Lite protocol is a lightweight version of the AXI4 protocol, used for simple, low-throughput memory-mapped communication interfaces. This project implements AXI4-Lite master and slave modules and verifies them using a detailed testbench.
+The AXI4-Lite Master-Slave project demonstrates a simple implementation of the AXI4-Lite protocol. It includes a master module that initiates read and write transactions and a slave module that responds to these transactions. The top-level module connects the master and slave, facilitating communication between them. A testbench is also provided to simulate and verify the functionality of the entire system.
 
-## Features
+## Tools
 
-- AXI4-Lite master and slave modules implemented in SystemVerilog.
-- Comprehensive testbench with multiple read and write transactions.
-- Simulation using Verilator and waveform analysis using GTKWave.
-- Automated build and simulation using Makefile and Linux shell scripts.
-- Performance optimization to reduce timing violations and ensure stable data transfer.
+To work with this project, you will need the following tools:
 
-## Tools Used
+- **Verilator**: An open-source Verilog simulator and linting tool.
+- **Make**: A build automation tool that automatically builds executable programs and libraries from source code.
 
-- SystemVerilog
-- Verilator
-- GTKWave
-- Makefile
-- Linux Shell
+## How to Run
 
-## Project Structure
+Follow these steps to clone the repository, build the project, and run the simulation:
 
-```
-AXI4_Lite_Project/
-├── axi4_lite_master.sv
-├── axi4_lite_slave.sv
-├── axi4_lite_top.sv
-├── main.cpp
-├── Makefile
-└── README.md
-```
-
-## Getting Started
-
-### Prerequisites
-
-Ensure you have the following tools installed:
-
-- Verilator
-- GTKWave
-- GCC
-- Make
-
-### Installation
-
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/AXI4_Lite_Project.git
-   cd AXI4_Lite_Project
+   git clone https://github.com/yourusername/axi4-lite-master-slave.git
+   cd axi4-lite-master-slave
    ```
 
-2. Build the project:
-   ```bash
-   make build
-   ```
-
-## Usage
-
-### Running the Simulation
-
-1. Clean previous builds:
+2. **Build and run the simulation**:
    ```bash
    make clean
-   ```
-
-2. Build the project:
-   ```bash
    make build
    ```
 
-3. Run the simulation:
-   ```bash
-   make run
-   ```
+   This will compile the Verilog files and run the testbench using Verilator. The simulation results will be displayed in the terminal.
 
-### Viewing Waveforms
+## File Descriptions
 
-1. Open the waveform file using GTKWave:
-   ```bash
-   gtkwave waveform.vcd
-   ```
-
-2. Add the relevant signals to the waveform viewer to analyze the data transfers and signal transitions.
-
-## Results
-
-The simulation verifies the functionality of the AXI4-Lite master and slave modules with multiple read and write transactions. The optimized logic reduces timing violations and ensures stable data transfer, achieving a 30% simulation efficiency improvement.
+- **`axi4_lite_master.sv`**: Implements the master functionality of the AXI4-Lite interface, handling read and write transactions.
+- **`axi4_lite_slave.sv`**: Implements the slave functionality of the AXI4-Lite interface, responding to read and write requests from the master.
+- **`axi4_lite_top.sv`**: Connects the master and slave modules, facilitating communication between them.
+- **`axi4_lite_top_tb.sv`**: A testbench for simulating the top-level AXI4-Lite system, providing stimulus and monitoring the responses.
+- **`Makefile`**: Automates the process of building and running the Verilog simulation using Verilator.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
