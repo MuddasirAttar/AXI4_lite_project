@@ -1,3 +1,6 @@
+Sure! Here is the `README.md` file for your project:
+
+```markdown
 # AXI4-Lite Protocol RTL Design and Verification
 
 This project demonstrates the design and verification of AXI4-Lite master and slave modules using SystemVerilog. The project includes a comprehensive testbench to verify the design with multiple read and write transactions, using Verilator for simulation and GTKWave for waveform analysis. Makefile and Linux shell scripts are used for automated build and simulation processes.
@@ -35,6 +38,7 @@ The AXI4-Lite protocol is a lightweight version of the AXI4 protocol, used for s
 
 ## Project Structure
 
+```
 AXI4_Lite_Project/
 ├── axi4_lite_master.sv
 ├── axi4_lite_slave.sv
@@ -42,9 +46,7 @@ AXI4_Lite_Project/
 ├── main.cpp
 ├── Makefile
 └── README.md
-
-markdown
-Copy code
+```
 
 ## Getting Started
 
@@ -63,37 +65,45 @@ Ensure you have the following tools installed:
    ```bash
    git clone https://github.com/yourusername/AXI4_Lite_Project.git
    cd AXI4_Lite_Project
-Build the project:
-bash
-Copy code
-make build
-Usage
-Running the Simulation
-Clean previous builds:
+   ```
 
-bash
-Copy code
-make clean
-Build the project:
+2. Build the project:
+   ```bash
+   make build
+   ```
 
-bash
-Copy code
-make build
-Run the simulation:
+## Usage
 
-bash
-Copy code
-make run
-Viewing Waveforms
-Open the waveform file using GTKWave:
+### Running the Simulation
 
-bash
-Copy code
-gtkwave waveform.vcd
-Add the relevant signals to the waveform viewer to analyze the data transfers and signal transitions.
+1. Clean previous builds:
+   ```bash
+   make clean
+   ```
 
-Results
+2. Build the project:
+   ```bash
+   make build
+   ```
+
+3. Run the simulation:
+   ```bash
+   make run
+   ```
+
+### Viewing Waveforms
+
+1. Open the waveform file using GTKWave:
+   ```bash
+   gtkwave waveform.vcd
+   ```
+
+2. Add the relevant signals to the waveform viewer to analyze the data transfers and signal transitions.
+
+## Results
+
 The simulation verifies the functionality of the AXI4-Lite master and slave modules with multiple read and write transactions. The optimized logic reduces timing violations and ensures stable data transfer, achieving a 30% simulation efficiency improvement.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
