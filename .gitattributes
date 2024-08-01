@@ -1,1 +1,12 @@
-
+Makefile linguist-language=Makefile
+*.mk linguist-language=Makefile
+*.sv linguist-language=SystemVerilog
+*.svh linguist-language=SystemVerilog
+*.cpp linguist-documentation
+*.hpp linguist-documentation
+*.h linguist-documentation
+*.cxx linguist-documentation
+*.cc linguist-documentation
+*.c linguist-documentation
+*.hxx linguist-documentation
+*.hh linguist-documentation
