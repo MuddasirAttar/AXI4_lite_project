@@ -1,6 +1,9 @@
 
 # AXI4-Lite Master-Slave Project
 
+
+![block_level](https://github.com/user-attachments/assets/dc9d7d4e-b0eb-4f9f-ab77-7e7eec7ad250)
+
 This repository contains Verilog code for an AXI4-Lite Master-Slave system, along with a testbench and a Makefile for simulation using Verilator.
 
 ## Overview
